@@ -131,8 +131,8 @@ public class AlphaService {
         logger.debug("execute1");
     }
     //刚方法会自动执行，无需调用
-    @Scheduled(initialDelay = 10000, fixedRate = 1000)
-    public void execute2(){
-        logger.debug("execute2");
-    }
+//    @Scheduled(initialDelay = 10000, fixedRate = 1000)
+//    public void execute2(){
+//        logger.debug("execute2");
+//    }
 }

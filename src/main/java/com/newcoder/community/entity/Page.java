@@ -55,6 +55,10 @@ public class Page {
      * 获取当前页的起始行
      */
 
+    public int getOffset(){
+        //current*limit - limit
+        return(current-1) * limit;
+    }
     public int getoffset(){
         //current*limit - limit
         return(current-1) * limit;

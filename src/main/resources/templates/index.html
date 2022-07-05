@@ -156,7 +156,7 @@
 						<li th:class="|page-item ${page.current ==1?'disabled':''}| ">
 							<a class="page-link" th:href="@{${page.path}(current=${page.current-1}) }">上一页</a></li>
 
-						<li th:class="|page-item  ${page.current==i?'activate':''}|" th:each="i:${#numbers.sequence(page.from,page.to)}">
+						<li th:class="|page-item  ${page.current==i?'active':''}|" th:each="i:${#numbers.sequence(page.from,page.to)}">
 							<a class="page-link" th:href="@{${page.path}(current=${i}) }" th:text="${i}">1</a></li>
 
 						<li th:class="|page-item ${page.current==page.total?'disabled':''} |">

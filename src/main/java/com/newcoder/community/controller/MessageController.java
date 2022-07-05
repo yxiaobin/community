@@ -41,7 +41,7 @@ public class MessageController implements CommunityConstant {
         page.setRows(messageService.findConversationCount(user.getId()));
         //会话列表
         List<Message> conversationlist =
-                messageService.findConversations(user.getId(), page.getoffset(), page.getLimit());
+                messageService.findConversations(user.getId(), page.getOffset(), page.getLimit());
         List<Map<String,Object>> conversations = new ArrayList<>();
         if(conversationlist != null){
             for(Message message:conversationlist){
@@ -73,7 +73,7 @@ public class MessageController implements CommunityConstant {
         page.setPath("/letter/detail/" + conversationId);
         page.setRows(messageService.findLetterCount(conversationId));
 
-        List<Message> letterList = messageService.findLetters(conversationId, page.getoffset(), page.getLimit());
+        List<Message> letterList = messageService.findLetters(conversationId, page.getOffset(), page.getLimit());
         List<Map<String,Object>> letters = new ArrayList<>();
         if(letterList != null){
             for(Message message : letterList){
@@ -223,7 +223,7 @@ public class MessageController implements CommunityConstant {
         page.setPath("/notice/detail" + topic);
         page.setRows(messageService.findNoticeCount(user.getId() ,topic));
 
-        List<Message> noticeList  = messageService.findNotice(user.getId(), topic, page.getoffset(),  page.getLimit());
+        List<Message> noticeList  = messageService.findNotice(user.getId(), topic, page.getOffset(),  page.getLimit());
         List<Map<String, Object>> noticeVoList = new ArrayList<>();
         if(noticeList != null){
             for(Message notice : noticeList){

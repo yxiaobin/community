@@ -97,7 +97,7 @@ public class DiscussPostController implements CommunityConstant {
 
         //评论：给帖子的评论
         //回复：给评论的评论
-        List<Comment> commentList = commentService.findCommentsByEntity(ENTITY_TYPE_POST ,post.getId(),page.getoffset(), page.getLimit());
+        List<Comment> commentList = commentService.findCommentsByEntity(ENTITY_TYPE_POST ,post.getId(),page.getOffset(), page.getLimit());
         //评论的VO列表
         List<Map<String,Object>> commentVoList = new ArrayList<>();
         if(commentList !=null){
