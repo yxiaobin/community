@@ -20,17 +20,17 @@ public class MailTests {
     @Autowired
     private TemplateEngine templateEngine;
 
-    @Test
-    public  void testEmail(){
-
-        mailClient.sendMail("1023045904@qq.com","Text", "帅哥，你好");
-    }
-    @Test
-    public void testHtmlMail(){
-        Context context = new Context();
-        context.setVariable("username","曹凡");
-        String content = templateEngine.process("/mail/demo",context);
-        System.out.println(content);
-        mailClient.sendMail("1023045904@qq.com","HtmlText", content);
-    }
+//    @Test
+//    public  void testEmail(){
+//
+//        mailClient.sendMail("1023045904@qq.com","Text", "帅哥，你好");
+//    }
+//    @Test
+//    public void testHtmlMail(){
+//        Context context = new Context();
+//        context.setVariable("username","曹凡");
+//        String content = templateEngine.process("/mail/demo",context);
+//        System.out.println(content);
+//        mailClient.sendMail("1023045904@qq.com","HtmlText", content);
+//    }
 }
